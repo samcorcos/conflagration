@@ -5,40 +5,46 @@ import styles from './style.css';
 
 const Home = React.createClass({
   render() {
-    let posts = [
+    let postsData = [
       {
-        profile: "url",
         upvotes: Math.floor(Math.random() * 100),
         thumbnail: "url",
         title: "This is the title of the post!",
-        author: "Bobby Tables",
+        author: {
+          username: "Bobby Tables",
+          profile: "url"
+        },
         timestamp: (new Date).getTime(),
         comments: Math.floor(Math.random() * 10),
         id: "1"
       },
       {
-        profile: "url",
         upvotes: Math.floor(Math.random() * 100),
         thumbnail: "url",
         title: "This is the title of the post!",
-        author: "Bobby Tables",
+        author: {
+          username: "Bobby Tables",
+          profile: "url"
+        },
         timestamp: (new Date).getTime(),
         comments: Math.floor(Math.random() * 10),
         id: "2"
       },
       {
-        profile: "url",
         upvotes: Math.floor(Math.random() * 100),
         thumbnail: "url",
         title: "This is the title of the post!",
-        author: "Bobby Tables",
+        author: {
+          username: "Bobby Tables",
+          profile: "url"
+        },
         timestamp: (new Date).getTime(),
         comments: Math.floor(Math.random() * 10),
         id: "3"
       }
     ]
 
-    let list = posts.map((post) => {
+    let list = postsData.map((post) => {
       return (
         <li className={ styles.post } key={ post.id }>
           <div className={ styles.profile }>
@@ -54,7 +60,7 @@ const Home = React.createClass({
           </div>
           <div className={ styles.postDetails }>
             <h3><a href="#" className={ styles.postTitle }>{ post.title }</a></h3>
-            <p className={ styles.postSubheader }>Submitted by <strong><a href="#">{ post.author }</a></strong> { post.timestamp } milliseconds ago.</p>
+            <p className={ styles.postSubheader }>Submitted by <strong><a href="#">{ post.author.username }</a></strong> { post.timestamp } milliseconds ago.</p>
             <p className={ styles.postSubheader }><a href="#">{ post.comments } comments</a> | <a href="#">share</a></p>
           </div>
         </li>

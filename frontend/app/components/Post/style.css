@@ -1,0 +1,112 @@
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  width: 800px;
+}
+
+
+.post {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 70px;
+}
+
+.voting {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  cursor: pointer;
+}
+
+.arrowUp {
+  composes: arrow;
+  border-bottom: 10px solid rgba(0,0,0,0.75);
+}
+.arrowDown {
+  composes: arrow;
+  border-top: 10px solid rgba(0,0,0,0.75);
+}
+
+.thumbnail {
+  width: 120px;
+}
+
+.postDetails {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.postTitle {
+  color: rgba(0,0,0,0.7);
+}
+
+.postSubheader {
+  font-size: 12px;
+  color: rgba(0,0,0,0.4);
+  margin-top: 0.5rem;
+}
+
+.postBody {
+  line-height: 1.5;
+}
+
+.comments {
+  border-top: 1px solid gray;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  width: 800px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* These are all temporary */
+
+.profilePlaceholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-color: rgba(0,0,0,0.25);
+}
+
+.thumbnailPlaceholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  background-color: rgba(0,0,0,0.25);
+}

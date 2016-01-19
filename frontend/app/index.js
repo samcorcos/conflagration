@@ -1,18 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import globals from 'styles/globals.css';
 
-import Home from './components/Home'
-import Profile from './components/Profile'
-import Post from './components/Post'
-import PostNew from './components/PostNew'
-import UserLogin from './components/UserLogin'
-import UserRegister from './components/UserRegister'
+import Home from 'components/Home'
+import Profile from 'components/Profile'
+import Post from 'components/Post'
+import PostNew from 'components/PostNew'
+import UserLogin from 'components/UserLogin'
+import UserRegister from 'components/UserRegister'
+import Navbar from 'components/Navbar'
 
 
 const App = React.createClass({
   render() {
-    return <div> { this.props.children } </div>
+    return (
+      <div>
+        <Navbar />
+        { this.props.children }
+      </div>
+    )
   }
 })
 

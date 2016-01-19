@@ -1,3 +1,110 @@
-.test {
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+}
 
+.content {
+  display: flex;
+  width: 800px;
+}
+
+.postsList {
+  width: 630px;
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 70px;
+}
+
+.voting {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  cursor: pointer;
+}
+
+.arrowUp {
+  composes: arrow;
+  border-bottom: 10px solid rgba(0,0,0,0.75);
+}
+.arrowDown {
+  composes: arrow;
+  border-top: 10px solid rgba(0,0,0,0.75);
+}
+
+.thumbnail {
+  width: 120px;
+}
+
+.postDetails {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.postTitle {
+  color: rgba(0,0,0,0.7);
+}
+
+.postSubheader {
+  font-size: 12px;
+  color: rgba(0,0,0,0.4);
+  margin-top: 0.5rem;
+}
+
+.ads {
+  border-left: 1px solid gray;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ads ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* These are all temporary */
+
+.adPlaceholder {
+  border: 1px solid black;
+  width: 160px;
+  height: 300px;
+  background: rgba(0,0,0,0.25);
+}
+
+.profilePlaceholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-color: rgba(0,0,0,0.25);
+}
+
+.thumbnailPlaceholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  background-color: rgba(0,0,0,0.25);
 }

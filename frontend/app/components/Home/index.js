@@ -5,6 +5,8 @@ import styles from './style.css';
 
 const Home = React.createClass({
   render() {
+
+    // TODO Limit post title length to 90 characters.
     let postsData = [
       {
         upvotes: Math.floor(Math.random() * 100),
@@ -21,7 +23,7 @@ const Home = React.createClass({
       {
         upvotes: Math.floor(Math.random() * 100),
         thumbnail: "url",
-        title: "This is the title of the post!",
+        title: "This is a really long title for a post. How long do we want to allow? We should limit this.",
         author: {
           username: "Bobby Tables",
           profile: "url"
@@ -33,7 +35,7 @@ const Home = React.createClass({
       {
         upvotes: Math.floor(Math.random() * 100),
         thumbnail: "url",
-        title: "This is the title of the post!",
+        title: "This is the title of the post! this is way too long. i want to see what happens when i write something that goes into the third line",
         author: {
           username: "Bobby Tables",
           profile: "url"
@@ -52,7 +54,7 @@ const Home = React.createClass({
           </div>
           <div className={ styles.voting }>
             <div className={ styles.arrowUp }></div>
-            <div>{ post.upvotes }</div>
+            <div className={ styles.votes }>{ post.upvotes }</div>
             <div className={ styles.arrowDown }></div>
           </div>
           <div className={ styles.thumbnail }>

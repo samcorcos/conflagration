@@ -6,10 +6,24 @@ import styles from './styles.css'
 const loggedIn = (
   <ul className={ styles.navbarItem }>
     <li>
-      Newsfeed
+      <div className={ styles.newsfeed }>
+        Newsfeed
+      </div>
     </li>
     <li>
-      Profile
+      <div className={ styles.profile }>
+        <div className={ styles.row }>
+          sam@learnphoenix.io
+        </div>
+        <div className={ styles.row }>
+          <div>
+            1200
+          </div>
+          <div>
+            ∞
+          </div>
+        </div>
+      </div>
     </li>
   </ul>
 )
@@ -27,11 +41,13 @@ const loggedOut = (
 
 const Navbar = React.createClass({
   render() {
-    let loginStatus = false
+    let loginStatus = true
     return (
       <div className={ styles.navbar }>
         <div className={ styles.logo }>
-          Conflagration.io
+          <h1>Conflagration.io</h1>
+          <p>The unofficial news source</p>
+          <p>of the Phoenix framework.</p>
         </div>
         <div>
           <ul className={ styles.navbarItem }>

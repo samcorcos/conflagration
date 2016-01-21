@@ -51,3 +51,46 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+.search {
+  composes: search from 'styles/form.css';
+}
+
+.signupButton {
+  composes: btnPrimary from 'styles/buttons.css';
+  font-size: 1em;
+}
+
+.login {
+  color: rgba(0,0,0,0.87);
+  cursor: pointer;
+}
+
+.modalBackground {
+  composes: modalBackground from 'styles/modals.css';
+}
+
+
+/*Transitions*/
+
+.enter {
+  opacity: 0.01;
+  transition: opacity 1.5s ease-in;
+}
+.enter.enter-active {
+  opacity: 1;
+}
+.leave {
+  opacity: 1;
+  transition: opacity 1.5s ease-in;
+}
+.leave.leave-active {
+  opacity: 0.01;
+}
+.appear {
+  opacity: 0.01;
+}
+.appear.appear-active {
+  opacity: 1;
+  transition: opacity 1.5s ease-in;
+}

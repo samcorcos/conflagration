@@ -1,0 +1,44 @@
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #888;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0;
+  box-shadow: none;
+  transition: all .3s;
+}
+
+.input:focus {
+  border-bottom: 1px solid green;
+  box-shadow: 0 1px 0 0 green;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #909;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #909;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #909;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #909;
+}
+
+.search {
+  border: 1px solid green;
+}
+
+.search:placeholder {
+  color: orange;
+}

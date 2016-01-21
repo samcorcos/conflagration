@@ -1,0 +1,30 @@
+.btn {
+  /*composes: copy from "./typography.css";*/
+  font-size: 1.2em;
+  font-weight: 400;
+  text-decoration: none;
+  border: 0.1rem rgb(200,200,200) solid;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btnFlat {
+  composes: btn;
+  background: inherit;
+  color: rgba(0, 0, 0, 0.87);
+}
+.btnFlat:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.btnPrimary {
+  composes: btn;
+  background-color: rgb(241, 69, 61);
+  color: white;
+}
+.btnPrimary:hover {
+  background-color: rgba(241,69,61,0.75);
+}

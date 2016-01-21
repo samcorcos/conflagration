@@ -1,47 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 import CSSModules from 'react-css-modules'
 import styles from './styles.css'
 
-const loggedIn = (
-  <ul className={ styles.navbarItem }>
-    <li>
-      <div className={ styles.newsfeed }>
-        Newsfeed
-      </div>
-    </li>
-    <li>
-      <div className={ styles.profile }>
-        <div className={ styles.row }>
-          sam@learnphoenix.io
-        </div>
-        <div className={ styles.row }>
-          <div>
-            1200
-          </div>
-          <div>
-            ∞
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-)
-
-const loggedOut = (
-  <ul className={ styles.navbarItem }>
-    <li>
-      Log in
-    </li>
-    <li>
-      Sign up
-    </li>
-  </ul>
-)
+import LoggedIn from './loggedin'
+import LoggedOut from './loggedout'
 
 const Navbar = React.createClass({
   render() {
-    let loginStatus = true
+    let loginStatus = false
     return (
       <div className={ styles.navbar }>
         <div className={ styles.logo }>
@@ -51,12 +19,14 @@ const Navbar = React.createClass({
         </div>
         <div>
           <ul className={ styles.navbarItem }>
-            <li>Search</li>
+            <li>
+              <input className={ styles.search } placeholder="Search" />
+            </li>
             <li>Filter</li>
           </ul>
         </div>
         <div>
-          { loginStatus ? loggedIn : loggedOut}
+          { loginStatus ? <LoggedIn /> : <LoggedOut />}
         </div>
       </div>
     )

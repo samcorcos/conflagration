@@ -28,7 +28,8 @@
     "react-dom": "^0.14.0",
     "history": "^1.13.0",
     "react-router": "^1.0.0",
-    "react-css-modules": "^3.6.1"
+    "react-css-modules": "^3.6.1",
+    "react-addons-css-transition-group": "^0.14.6"
   },
   "babel": {
     "presets": ["es2015", "stage-0", "react"]

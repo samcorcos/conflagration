@@ -12,11 +12,11 @@ const Navbar = React.createClass({
     let loginStatus = false
     return (
       <div className={ styles.navbar }>
-        <div className={ styles.logo }>
+        <Link to="/" className={ styles.logo }>
           <h1>Conflagration.io</h1>
           <p>The unofficial news source</p>
           <p>of the Phoenix framework.</p>
-        </div>
+        </Link>
         <div>
           <ul className={ styles.navbarItem }>
             <li>

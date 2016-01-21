@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CSSModules from 'react-css-modules';
-import styles from './style.css';
+import styles from './styles.css';
 
 const Home = React.createClass({
   render() {

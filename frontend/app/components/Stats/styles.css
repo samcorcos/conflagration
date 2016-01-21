@@ -1,0 +1,17 @@
+.stats {
+  height: 100px;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.chartWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 300;
+}
+
+.chart {
+  padding: 1rem;
+}

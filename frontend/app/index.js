@@ -9,6 +9,7 @@ import PostView from 'components/Post'
 import PostNew from 'components/PostNew'
 import UserRegister from 'components/UserRegister'
 import Navbar from 'components/Navbar'
+import Stats from 'components/Stats'
 
 
 const App = React.createClass({
@@ -30,6 +31,7 @@ ReactDOM.render((
 			<Route path="post" component={PostView} />
 			<Route path="new" component={PostNew} />
 			<Route path="register" component={UserRegister} />
+      <Route path="stats" component={Stats} />
 		</Route>
 	</Router>
 ), document.getElementById('root'))

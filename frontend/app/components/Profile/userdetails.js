@@ -6,19 +6,19 @@ import styles from './styles.css'
 let user = {
   username: "Sam Corcos",
   contact: "sam@learnphoenix.io",
-  social: {
-    twitter: "@samcorcos",
-    facebook: "/samcorcos",
-    google: "+samcorcos"
-  },
-  badges: [
-    "admin",
-    "superduper"
-  ]
+  social: [
+    { platform: "twitter", link: "twitter.com/samcorcos" },
+    { platform: "google", link: "twitter.com/samcorcos" },
+    { platform: "facebook", link: "twitter.com/samcorcos" }
+  ],
+  badge: "admin"
 }
 
-// TODO map over social icons to create them
-// TODO map over badges to create them
+let socialList = user.social.map(function(item) {
+  return (
+    <div key={ item.platform } className={ styles.socialPlaceholder }></div>
+  )
+})
 
 const UserDetails = React.createClass({
   render() {
@@ -35,17 +35,15 @@ const UserDetails = React.createClass({
             { user.contact }
           </div>
           <div className={ styles.social }>
-            <div className={ styles.socialPlaceholder }></div>
-            <div className={ styles.socialPlaceholder }></div>
-            <div className={ styles.socialPlaceholder }></div>
+            { socialList }
           </div>
         </div>
         <div className={ styles.profileScore }>
           <div className={ styles.score }>
-            100
+            100,000
           </div>
           <div className={ styles.badges }>
-            badge
+            { user.badge }
           </div>
         </div>
       </section>

@@ -5,8 +5,13 @@
 
 .content {
   display: flex;
+  flex-direction: column;
   width: 800px;
 }
+
+/****************
+User Details view
+****************/
 
 .profile {
   display: flex;
@@ -63,6 +68,23 @@
 
 .badge {
 
+}
+
+/****************
+User Details view
+****************/
+
+.userData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+
+.chart {
+  padding: 1rem;
 }
 
 /*Placeholders*/

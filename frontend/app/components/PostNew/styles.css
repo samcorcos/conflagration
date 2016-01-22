@@ -1,0 +1,9 @@
+.postWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.post {
+  display: flex;
+  width: calc(100vw - 20%);
+}

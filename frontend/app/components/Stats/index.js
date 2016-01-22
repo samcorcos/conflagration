@@ -5,6 +5,38 @@ import styles from './styles.css'
 
 import { VictoryChart, VictoryLine, VictoryBar } from 'victory'
 
+let postsData = [
+  { thumbnail: "url", title: "This is the title", views: 100, clicks: 10},
+  { thumbnail: "url", title: "another article title", views: 130, clicks: 10},
+  { thumbnail: "url", title: "third article", views: 49, clicks: 10},
+  { thumbnail: "url", title: "this is a link to something with an exceedingly long name for the sake of testing", views: 100, clicks: 10}
+]
+
+let posts = postsData.map(function(post) {
+  return (
+    <div className={ styles.row }>
+      <div>
+        <div className={ styles.imagePlaceholder }></div>
+      </div>
+      <h2 className={ styles.title }>
+        { post.title }
+      </h2>
+      <div className={ styles.statBox }>
+        <div className={ styles.stat }>
+          { post.views }
+        </div>
+        <div className={ styles.stat }>
+          { post.clicks }
+        </div>
+        <div className={ styles.stat }>
+          { (Math.floor(post.clicks / post.views * 100)) + "%" }
+        </div>
+      </div>
+    </div>
+  )
+})
+
+
 const Stats = React.createClass({
   getInitialState() {
     return {
@@ -60,9 +92,16 @@ const Stats = React.createClass({
               ]} />
           </VictoryChart>
         </div>
-        <div>
-          <h2>Another cool chart</h2>
-          <div>Some corresponding chart</div>
+        <div className={ styles.postList }>
+          <div className={ styles.statTitleList }>
+            <div className={ styles.statTitle1 }>Title</div>
+            <div className={ styles.statBox }>
+              <div className={ styles.statTitle }>Views</div>
+              <div className={ styles.statTitle }>Clicks</div>
+              <div className={ styles.statTitle }>CTR</div>
+            </div>
+          </div>
+          { posts }
         </div>
       </section>
     )

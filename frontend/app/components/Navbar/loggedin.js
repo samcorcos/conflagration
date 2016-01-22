@@ -16,6 +16,9 @@ const LoggedIn = React.createClass({
       toggled: this.state.toggled ? false : true
     })
   },
+  logout() {
+    console.log("logout")
+  },
   render() {
     let test = styles.profile
     return (
@@ -39,20 +42,18 @@ const LoggedIn = React.createClass({
               </div>
             </div>
             <div className={ this.state.toggled ? styles.dropdown : styles.hidden }>
-              <ul>
-                <li className={ styles.dropdownItem }>
-                  New Post
-                </li>
-                <li className={ styles.dropdownItem }>
-                  Profile
-                </li>
-                <li className={ styles.dropdownItem }>
-                  Stats
-                </li>
-                <li className={ styles.dropdownItem }>
-                  Logout
-                </li>
-              </ul>
+              <Link to="new" className={ styles.dropdownItem }>
+                New Post
+              </Link>
+              <Link to="profile" className={ styles.dropdownItem }>
+                Profile
+              </Link>
+              <Link to="stats" className={ styles.dropdownItem }>
+                Stats
+              </Link>
+              <div onClick={this.logout} className={ styles.dropdownItem }>
+                Logout
+              </div>
             </div>
           </div>
         </li>

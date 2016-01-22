@@ -18,11 +18,11 @@ const Navbar = React.createClass({
           <p>of the Phoenix framework.</p>
         </Link>
         <div>
-          <ul className={ styles.navbarItem }>
-            <li>
+          <ul className={ styles.navbarGroup }>
+            <li className={ styles.navbarListItem }>
               <input className={ styles.search } placeholder="Search" />
             </li>
-            <li>Filter</li>
+            <li className={ styles.navbarListItem }>Filter</li>
           </ul>
         </div>
         <div>

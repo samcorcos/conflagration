@@ -10,11 +10,11 @@ const LoggedOut = React.createClass({
   render() {
     return (
       <div>
-        <ul className={ styles.navbarItem }>
-          <li>
+        <ul className={ styles.navbarGroup }>
+          <li className={ styles.navbarListItem }>
             <div className={ styles.login }>Log in</div>
           </li>
-          <li>
+          <li className={ styles.navbarListItem }>
             <Link to="register">
               <button className={ styles.signupButton }>Sign up</button>
             </Link>

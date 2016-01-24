@@ -5,7 +5,7 @@ import CSSModules from 'react-css-modules'
 import styles from './styles.css'
 
 let posts = [
-  
+  { thumbnail: "url", title: "This is the title of the first post.", votes: 29}
 ]
 
 let comments = [

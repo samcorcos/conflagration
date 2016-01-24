@@ -25,7 +25,7 @@ const UserDetails = React.createClass({
     return (
       <section className={ styles.profile }>
         <div className={ styles.profileImage }>
-          <div className={ styles.imagePlaceholder }></div>
+          <div className={ styles.profilePlaceholderLarge }></div>
         </div>
         <div className={ styles.profileDetails }>
           <div className={ styles.username }>

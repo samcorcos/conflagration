@@ -15,6 +15,7 @@
   composes: btn;
   background: inherit;
   color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
 }
 .btnFlat:hover {
   background: rgba(0, 0, 0, 0.2);
@@ -22,9 +23,9 @@
 
 .btnPrimary {
   composes: btn;
-  background-color: rgb(241, 69, 61);
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
 }
 .btnPrimary:hover {
-  background-color: rgba(241,69,61,0.75);
+  background-color: white;
 }

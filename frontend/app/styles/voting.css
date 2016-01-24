@@ -1,0 +1,29 @@
+.voting {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.votes {
+  font-size: 1.5em;
+  padding-bottom: 3px;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  cursor: pointer;
+}
+
+.arrowUp {
+  composes: arrow;
+  border-bottom: 10px solid rgba(0,0,0,0.75);
+}
+.arrowDown {
+  composes: arrow;
+  border-top: 10px solid rgba(0,0,0,0.75);
+}

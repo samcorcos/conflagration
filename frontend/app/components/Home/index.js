@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router'
 
 import CSSModules from 'react-css-modules';
 import styles from './styles.css';
@@ -61,7 +62,7 @@ const Home = React.createClass({
             <div className={ styles.thumbnailPlaceholder }></div>
           </div>
           <div className={ styles.postDetails }>
-            <h3><a href="#" className={ styles.postTitle }>{ post.title }</a></h3>
+            <h3><Link to="post" className={ styles.postTitle }>{ post.title }</Link></h3>
             <p className={ styles.postSubheader }>Submitted by <strong><a href="#">{ post.author.username }</a></strong> { post.timestamp } milliseconds ago.</p>
             <p className={ styles.postSubheader }><a href="#">{ post.comments } comments</a> | <a href="#">share</a></p>
           </div>

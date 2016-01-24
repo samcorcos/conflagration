@@ -29,7 +29,7 @@ const Comments = React.createClass({
         <div className={ styles.row }>
           <div className={ styles.voting }>
             <div className={ styles.arrowUp }></div>
-            <div>{ commentData.upvotes }</div>
+            <div className={ styles.votes }>{ commentData.upvotes }</div>
             <div className={ styles.arrowDown }></div>
           </div>
           <div className={ styles.profileImage }>

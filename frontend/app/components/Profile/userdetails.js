@@ -37,6 +37,9 @@ const UserDetails = React.createClass({
           <div className={ styles.social }>
             { socialList }
           </div>
+          <div>
+            <button className={ styles.follow }>Follow</button>
+          </div>
         </div>
         <div className={ styles.profileScore }>
           <div className={ styles.score }>

@@ -16,20 +16,20 @@ const UserData = React.createClass({
         <section className={ styles.userData }>
             <div className={ styles.aggregatedData }>
               <div className={ styles.statistic }>
-                <h3>Statistic</h3>
-                <p>140</p>
+                <h3>Total posts</h3>
+                <p>12</p>
               </div>
               <div className={ styles.statistic }>
-                <h3>Statistic</h3>
-                <p>140</p>
+                <h3>Total comments</h3>
+                <p>41</p>
               </div>
               <div className={ styles.statistic }>
-                <h3>Statistic</h3>
-                <p>140</p>
+                <h3>Total impressions</h3>
+                <p>45,043</p>
               </div>
               <div className={ styles.statistic }>
-                <h3>Statistic</h3>
-                <p>140</p>
+                <h3>Total clicks</h3>
+                <p>1,101</p>
               </div>
             </div>
         </section>

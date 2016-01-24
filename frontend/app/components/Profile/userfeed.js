@@ -17,10 +17,32 @@ let upvotes = [
 ]
 
 const UserFeed = React.createClass({
+  // TODO move this from local state
+  getInitialState() {
+    return {
+      feed: "posts"
+    }
+  },
+  handleChange(feed) {
+    this.setState({
+      feed: feed
+    })
+  },
   render() {
     return (
       <section className={ styles.userFeed }>
-        user feed
+        <div className={ styles.titleRow }>
+          <h2
+            onClick={this.handleChange.bind(null, "posts")}
+            className={ this.state.feed === "posts" ? styles.feedTitleActive : styles.feedTitle }>Posts</h2>
+          <h2
+            onClick={this.handleChange.bind(null, "comments")}
+            className={ this.state.feed === "comments" ? styles.feedTitleActive : styles.feedTitle }>Comments</h2>
+          <h2
+            onClick={this.handleChange.bind(null, "upvotes")}
+            className={ this.state.feed === "upvotes" ? styles.feedTitleActive : styles.feedTitle }>Upvotes</h2>
+        </div>
+
       </section>
     )
   }

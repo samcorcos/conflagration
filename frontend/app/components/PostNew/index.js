@@ -28,7 +28,7 @@ const PostNew = React.createClass({
                 </Dropzone>
                 :
                 <Dropzone className={ styles.dropzone } multiple={false} onDrop={this.onDrop}>
-                  <div className={ styles.dropzoneText }>Drop or click</div>
+                  <div className={ styles.dropzoneText }>Drop image or click<br />(optional)</div>
                 </Dropzone>
               }
             </div>
@@ -36,7 +36,7 @@ const PostNew = React.createClass({
               <div className={ styles.row }>
                 <div className={ styles.title }>
                   <label htmlFor="title">Title</label>
-                  <input id="title" />
+                  <input placeholder="Title of the post" id="title" />
                 </div>
                 <div className={ styles.link }>
                   <label htmlFor="url">Link</label>
@@ -46,13 +46,12 @@ const PostNew = React.createClass({
               <div className={ styles.row }>
                 <div className={ styles.body }>
                   <label htmlFor="body">Body</label>
-                  <textarea id="body" className={ styles.textarea }></textarea>
+                  <textarea id="body" placeholder="(optional)" className={ styles.textarea }></textarea>
                 </div>
               </div>
               <div className={ styles.row }>
-                <input className={ styles.categories } placeholder="categories" />
+                <input className={ styles.categories } placeholder="Up to 3 categories" />
               </div>
-
             </div>
           </div>
           <div className={ styles.buttonRow }>

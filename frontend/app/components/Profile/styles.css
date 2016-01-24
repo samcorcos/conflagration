@@ -110,6 +110,35 @@ User Data view
   font-size: 1.5em;
 }
 
+.titleRow {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+
+/*Need to combine these two for the sake of DRY*/
+.feedTitle {
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  width: 33.33%;
+  text-align: center;
+  padding: calc(0.5rem + 1px);
+  padding-bottom: 0.5rem;
+}
+
+.feedTitleActive {
+  border: 1px solid rgba(0,0,0,0.25);
+  border-bottom: none;
+  width: 33.33%;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  text-align: center;
+  padding: 0.5rem;
+  padding-bottom: calc(0.5rem + 1px);
+}
 
 /*Placeholders*/
 

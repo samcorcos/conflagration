@@ -17,22 +17,22 @@
   box-shadow: 0 1px 0 0 green;
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #909;
+::-webkit-input-placeholder {
+    color:    rgba(0,0,0,0.25);
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #909;
+:-moz-placeholder {
+   color:    rgba(0,0,0,0.25);
    opacity:  1;
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #909;
+::-moz-placeholder {
+   color:    rgba(0,0,0,0.25);
    opacity:  1;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #909;
+:-ms-input-placeholder {
+   color:    rgba(0,0,0,0.25);
 }
-:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
-  color:    #909;
+:placeholder-shown {
+  color:    rgba(0,0,0,0.25);
 }
 
 .search {

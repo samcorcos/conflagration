@@ -5,5 +5,79 @@
 
 .post {
   display: flex;
-  width: calc(100vw - 20%);
+  width: 1000px;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.title, .link {
+  composes: formGroup;
+  width: 350px;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.body {
+  composes: formGroup;
+  width: 700px;
+  padding: 0 1rem;
+}
+
+.dropzoneText {
+  color: white;
+}
+
+.dropzoneWrapper {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.dropzone {
+  width: 200px;
+  height: 200px;
+  border-width: 2px;
+  border-color: white;
+  border-style: dashed;
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.textarea {
+  height: 100px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  composes: btnPrimary from 'styles/buttons.css';
+  margin-right: 1rem;
+}
+
+.buttonRow {
+  display: flex;
+  align-self: flex-end;
+}
+
+.categories {
+  width: 100%;
+  margin: 1rem;
 }

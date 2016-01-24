@@ -41,6 +41,11 @@
   line-height: 1.5;
 }
 
+.pointsBadge {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
 
 /* These are all temporary */
 

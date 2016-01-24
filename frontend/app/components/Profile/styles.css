@@ -121,6 +121,11 @@ User Data view
   justify-content: space-around;
   margin-top: 2rem;
   cursor: pointer;
+  padding-bottom: 2rem;
+}
+
+.userFeed {
+  padding-bottom: 3rem;
 }
 
 
@@ -142,6 +147,18 @@ User Data view
   text-align: center;
   padding: 0.5rem;
   padding-bottom: calc(0.5rem + 1px);
+}
+
+.feedList {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.noUpvotes {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3em;
+  color: rgba(0,0,0,0.4);
 }
 
 /*Placeholders*/

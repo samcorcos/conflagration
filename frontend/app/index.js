@@ -7,7 +7,6 @@ import Home from 'components/Home'
 import Profile from 'components/Profile'
 import PostView from 'components/Post'
 import PostNew from 'components/PostNew'
-import UserRegister from 'components/UserRegister'
 import Navbar from 'components/Navbar'
 import Stats from 'components/Stats'
 
@@ -30,7 +29,6 @@ ReactDOM.render((
 			<Route path="profile" component={Profile} />
 			<Route path="post" component={PostView} />
 			<Route path="new" component={PostNew} />
-			<Route path="register" component={UserRegister} />
       <Route path="stats" component={Stats} />
 		</Route>
 	</Router>

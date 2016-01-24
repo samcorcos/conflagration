@@ -3,20 +3,12 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles.css'
 
-const UserRegister = React.createClass({
+const UserLogin = React.createClass({
   render() {
     return (
-      <section className={ styles.registrationWrapper }>
-        <div className={ styles.registrationCard }>
-          <form className={ styles.registrationForm }>
-            <div className={ styles.formGroup }>
-              <label>First</label>
-              <input className={ styles.input } />
-            </div>
-            <div className={ styles.formGroup }>
-              <label>Last</label>
-              <input className={ styles.input } />
-            </div>
+      <section className={ styles.loginWrapper }>
+        <div className={ styles.loginCard }>
+          <form className={ styles.loginForm }>
             <div className={ styles.formGroup }>
               <label>Email</label>
               <input className={ styles.input } type="email" />
@@ -46,4 +38,4 @@ const UserRegister = React.createClass({
   }
 });
 
-export default CSSModules(UserRegister, styles);
+export default CSSModules(UserLogin, styles);

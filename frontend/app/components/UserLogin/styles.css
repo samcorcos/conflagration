@@ -1,4 +1,4 @@
-.registrationWrapper {
+.loginWrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.registrationCard {
+.loginCard {
   height: auto;
   width: 300px;
   border: 1px solid rgba(0,0,0,0.25);
@@ -18,7 +18,7 @@
   background: white;
 }
 
-.registrationForm {
+.loginForm {
   display: flex;
   flex-flow: column nowrap;
 }
@@ -27,6 +27,10 @@
   display: flex;
   flex-flow: column nowrap;
   margin: 4px 0;
+}
+
+.signupWrapper {
+
 }
 
 .btnPrimary {

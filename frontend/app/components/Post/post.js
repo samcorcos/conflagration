@@ -3,8 +3,9 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles.css'
 
+import PostComponent from 'components/Home/post'
+
 let postData = {
-  profile: "url",
   upvotes: Math.floor(Math.random() * 100),
   thumbnail: "url",
   title: "This is the title of the post!",
@@ -22,25 +23,15 @@ let postData = {
 const Post = React.createClass({
   render() {
     return (
-      <div key={ postData.id }>
-        <div className={ styles.post }>
-          <div className={ styles.profile }>
-            <div className={ styles.profilePlaceholder }></div>
-          </div>
-          <div className={ styles.voting }>
-            <div className={ styles.arrowUp }></div>
-            <div>{ postData.upvotes }</div>
-            <div className={ styles.arrowDown }></div>
-          </div>
-          <div className={ styles.thumbnail }>
-            <div className={ styles.thumbnailPlaceholder }></div>
-          </div>
-          <div className={ styles.postDetails }>
-            <h3><a href="#" className={ styles.postTitle }>{ postData.title }</a></h3>
-            <p className={ styles.postSubheader }>Submitted by <strong><a href="#">{ postData.author.username }</a></strong> { postData.timestamp } milliseconds ago.</p>
-            <p className={ styles.postSubheader }><a href="#">{ postData.comments } comments</a> | <a href="#">share</a></p>
-          </div>
-        </div>
+      <div>
+        <PostComponent
+          upvotes={postData.upvotes}
+          thumbnail={postData.thumbnail}
+          title={postData.title}
+          author={postData.author} // must have "username" and "profile" for image
+          timestamp={postData.timestamp}
+          comments={postData.comments} // this is the comment count
+        />
         <div className={styles.postBody }>
           { postData.body }
         </div>

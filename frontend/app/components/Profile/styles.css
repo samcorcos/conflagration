@@ -75,6 +75,10 @@ User Details view
   padding: 10px 40px;
 }
 
+.btnDisabled {
+  composes: follow;
+  composes: btnPrimary from 'styles/buttons.css';
+}
 
 
 /****************

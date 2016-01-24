@@ -30,3 +30,10 @@
   background-color: white;
   color: rgba(0, 0, 0, 0.87)
 }
+
+.btnDisabled {
+  composes: btn;
+  color: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.2);
+  pointer-events: none;
+}

@@ -4,8 +4,13 @@ import { Link } from 'react-router'
 import CSSModules from 'react-css-modules'
 import styles from './styles.css'
 
+import PostComponent from 'components/Home/post'
+
 let posts = [
-  { thumbnail: "url", title: "This is the title of the first post.", votes: 29}
+  { thumbnail: "url", title: "This is the title of the first post.", votes: 29},
+  { thumbnail: "url", title: "Files are interesting", votes: 42},
+  { thumbnail: "url", title: "I wonder where the images will be stored", votes: 54},
+  { thumbnail: "url", title: "Four posts should be enough", votes: 2}
 ]
 
 let comments = [

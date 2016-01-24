@@ -22,6 +22,8 @@ let socialList = user.social.map(function(item) {
 
 const UserDetails = React.createClass({
   render() {
+    // TODO this is a placeholder to test follow button
+    let following = false
     return (
       <section className={ styles.profile }>
         <div className={ styles.profileImage }>
@@ -38,7 +40,7 @@ const UserDetails = React.createClass({
             { socialList }
           </div>
           <div>
-            <button className={ styles.follow }>Follow</button>
+            { following ? <button className={ styles.btnDisabled }>Following</button> : <button className={ styles.follow }>Follow</button>}
           </div>
         </div>
         <div className={ styles.profileScore }>

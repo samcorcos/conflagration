@@ -4,6 +4,8 @@ import { Link } from 'react-router'
 import CSSModules from 'react-css-modules';
 import styles from './styles.css';
 
+import Post from './post'
+
 // TODO Limit post title length to 90 characters.
 let postsData = [
   {
@@ -44,30 +46,6 @@ let postsData = [
   }
 ]
 
-let list = postsData.map((post) => {
-  return (
-    <li className={ styles.post } key={ post.id }>
-      <div className={ styles.profile }>
-        <div className={ styles.profilePlaceholder }></div>
-      </div>
-      <div className={ styles.voting }>
-        <div className={ styles.arrowUp }></div>
-        <div className={ styles.votes }>{ post.upvotes }</div>
-        <div className={ styles.arrowDown }></div>
-      </div>
-      <div className={ styles.thumbnail }>
-        <div className={ styles.thumbnailPlaceholder }></div>
-      </div>
-      <div className={ styles.postDetails }>
-        <h3><Link to="post" className={ styles.postTitle }>{ post.title }</Link></h3>
-        <p className={ styles.postSubheader }>
-          Submitted by <strong><a href="#">{ post.author.username }</a></strong> { post.timestamp } milliseconds ago.
-        </p>
-        <p className={ styles.postSubheader }><a href="#">{ post.comments } comments</a> | <a href="#">share</a></p>
-      </div>
-    </li>
-  )
-})
 
 const Home = React.createClass({
   render() {
@@ -76,7 +54,19 @@ const Home = React.createClass({
         <div className={ styles.content }>
           <section className={ styles.postsList }>
             <ul>
-              { list }
+              { postsData.map(function(post) {
+                return (
+                  <Post
+                    key={post.id}
+                    upvotes={post.upvotes}
+                    title={post.title}
+                    author={post.author}
+                    timestamp={post.timestamp}
+                    comments={post.comments}
+                    />
+                )
+              })
+            }
             </ul>
           </section>
 

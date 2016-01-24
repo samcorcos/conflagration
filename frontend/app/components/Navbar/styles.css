@@ -92,7 +92,7 @@
 }
 
 .search {
-  composes: search from 'styles/form.css';
+  composes: search from 'styles/forms.css';
 }
 
 .signupButton {

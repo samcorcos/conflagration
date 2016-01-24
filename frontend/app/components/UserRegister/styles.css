@@ -1,0 +1,49 @@
+.registrationWrapper {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.registrationCard {
+  height: auto;
+  width: 300px;
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 3px;
+  padding: 1rem;
+}
+
+.registrationForm {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.formGroup {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 4px 0;
+}
+
+.btnPrimary {
+  composes: btnPrimary from 'styles/buttons.css';
+  padding: 0.5rem 1rem;
+  margin-top: 0.7rem;
+}
+
+.input {
+  composes: input from 'styles/forms.css';
+  height: 2rem;
+}
+
+/*Placeholders*/
+
+.socialLoginPlaceholder {
+  width: 100%;
+  height: 30px;
+  background: red;
+  border-radius: 3px;
+  color: white;
+  margin: 2px 0;
+  cursor: pointer;
+}

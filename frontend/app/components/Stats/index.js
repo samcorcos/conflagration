@@ -9,12 +9,12 @@ let postsData = [
   { thumbnail: "url", title: "This is the title", views: 100, clicks: 10},
   { thumbnail: "url", title: "another article title", views: 130, clicks: 10},
   { thumbnail: "url", title: "third article", views: 49, clicks: 10},
-  { thumbnail: "url", title: "this is a link to something with an exceedingly long name for the sake of testing", views: 100, clicks: 10}
+  { thumbnail: "url", title: "this is a link to something with an exceedingly long name for the sake of testing", views: 1420, clicks: 10}
 ]
 
 let posts = postsData.map(function(post) {
   return (
-    <div className={ styles.row }>
+    <div className={ styles.row } key={ post.views }>
       <div>
         <div className={ styles.imagePlaceholder }></div>
       </div>

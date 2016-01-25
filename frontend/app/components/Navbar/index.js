@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux';
 
 import CSSModules from 'react-css-modules'
 import styles from './styles.css'
@@ -10,7 +11,7 @@ import LoggedOut from './loggedout'
 const Navbar = React.createClass({
   render() {
     // TODO this is a placeholder
-    let loginStatus = true
+    let loginStatus = this.props.currentUser
     return (
       <div className={ styles.navbar }>
         <Link to="/" className={ styles.logo }>
@@ -27,11 +28,17 @@ const Navbar = React.createClass({
           </ul>
         </div>
         <div>
-          { loginStatus ? <LoggedIn /> : <LoggedOut />}
+          { loginStatus ? <LoggedIn currentUser={this.props.currentUser} /> : <LoggedOut />}
         </div>
       </div>
     )
   }
 })
 
-export default CSSModules(Navbar, styles)
+function mapStateToProps(state) {
+  return {
+    currentUser: state.currentUser
+  }
+}
+
+export default connect(mapStateToProps)(CSSModules(Navbar, styles))

@@ -10,14 +10,15 @@ const LoggedOut = React.createClass({
   // TODO move out of local state
   getInitialState() {
     return {
-      modal: false,
-      loginOrRegister: null
+      modal: true,
+      loginOrRegister: "login"
     }
   },
   toggleModal(type, e) {
     this.setState({
-      modal: this.state.modal ? false : true,
-      loginOrRegister: type
+      //modal: this.state.modal ? false : true,
+      modal: true,
+      loginOrRegister: "login"
     })
   },
   render() {

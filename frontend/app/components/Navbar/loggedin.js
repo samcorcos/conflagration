@@ -11,7 +11,7 @@ const ProfileDropdown = React.createClass({
     return (
       <div onClick={this.props.handleProfileDropdown} className={ this.props.profileDropdown ? styles.profileToggled : styles.profile }>
         <div className={ styles.row }>
-          sam@learnphoenix.io
+          { this.props.currentUser.username }
         </div>
         <div className={ styles.row }>
           <div>
@@ -63,13 +63,14 @@ const LoggedIn = React.createClass({
   },
   render() {
     let test = styles.profile
+    console.log(this.props)
     return (
       <ul className={ styles.navbarGroup }>
         <li className={ styles.navbarListItem }>
           <Newsfeed handleNewsfeedDropdown={this.handleNewsfeedDropdown} newsfeedDropdown={this.state.newsfeedDropdown} />
         </li>
         <li className={ styles.navbarListItem }>
-          <ProfileDropdown handleProfileDropdown={this.handleProfileDropdown} profileDropdown={this.state.profileDropdown} />
+          <ProfileDropdown currentUser={this.props.currentUser} handleProfileDropdown={this.handleProfileDropdown} profileDropdown={this.state.profileDropdown} />
         </li>
       </ul>
     )

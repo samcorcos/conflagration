@@ -3,18 +3,11 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './styles.css'
 
-let user = {
-  username: "Sam Corcos",
-  contact: "sam@learnphoenix.io",
-  social: [
-    { platform: "twitter", link: "twitter.com/samcorcos" },
-    { platform: "google", link: "twitter.com/samcorcos" },
-    { platform: "facebook", link: "twitter.com/samcorcos" }
-  ],
-  badge: "admin"
-}
+import { userData } from 'config/seeds.js'
 
-let socialList = user.social.map(function(item) {
+
+
+let socialList = userData.social.map(function(item) {
   return (
     <div key={ item.platform } className={ styles.socialPlaceholder }></div>
   )
@@ -31,10 +24,10 @@ const UserDetails = React.createClass({
         </div>
         <div className={ styles.profileDetails }>
           <div className={ styles.username }>
-            { user.username }
+            { userData.username }
           </div>
           <div className={ styles.contact }>
-            { user.contact }
+            { userData.contact }
           </div>
           <div className={ styles.social }>
             { socialList }
@@ -48,7 +41,7 @@ const UserDetails = React.createClass({
             100,000
           </div>
           <div className={ styles.badges }>
-            { user.badge }
+            { userData.badge }
           </div>
         </div>
       </section>

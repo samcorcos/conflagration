@@ -26,15 +26,6 @@
   align-items: center;
 }
 
-.newsfeed {
-  display: flex;
-  align-items: center;
-  border: 1px solid rgba(0,0,0,0.5);
-  background: rgba(0,0,0,0.25);
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-}
-
 .profile {
   position: relative;
   display: flex;
@@ -54,7 +45,7 @@
   border-bottom: 1px solid rgba(0,0,0,0);
 }
 
-.dropdown {
+.profileDropdown {
   position: absolute;
   top: 58;
   left: -1;

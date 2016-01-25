@@ -6,47 +6,9 @@ import styles from './styles.css'
 
 import PostComponent from 'components/Home/post'
 import CommentComponent from 'components/Post/comment'
+import { postListData, commentListData } from 'config/seeds'
 
-let postsData = [
-  {
-    upvotes: Math.floor(Math.random() * 100),
-    thumbnail: "url",
-    title: "This is the title of the post!",
-    author: {
-      username: "Bobby Tables",
-      profile: "url"
-    },
-    timestamp: (new Date).getTime(),
-    comments: Math.floor(Math.random() * 10),
-    id: "1"
-  },
-  {
-    upvotes: Math.floor(Math.random() * 100),
-    thumbnail: "url",
-    title: "This is a really long title for a post. How long do we want to allow? We should limit this.",
-    author: {
-      username: "Bobby Tables",
-      profile: "url"
-    },
-    timestamp: (new Date).getTime(),
-    comments: Math.floor(Math.random() * 10),
-    id: "2"
-  },
-  {
-    upvotes: Math.floor(Math.random() * 100),
-    thumbnail: "url",
-    title: "This is the title of the post! this is way too long. i want to see what happens when i write something that goes into the third line",
-    author: {
-      username: "Bobby Tables",
-      profile: "url"
-    },
-    timestamp: (new Date).getTime(),
-    comments: Math.floor(Math.random() * 10),
-    id: "3"
-  }
-]
-
-let postList = postsData.map(function(post) {
+let postList = postListData.map(function(post) {
   return (
     <PostComponent
       key={post.id} // this is not strictly necessary
@@ -59,20 +21,6 @@ let postList = postsData.map(function(post) {
     />
   )
 })
-
-
-let commentData = [{
-  author: {
-    profile: "url",
-    username: "Bobby Tables",
-    points: Math.floor(Math.random() * 1000),
-    badge: "url"
-  },
-  upvotes: Math.floor(Math.random() * 100),
-  timestamp: (new Date).getTime(),
-  body: "This is the body of the post. Not every post will have stuff written here. It's entirely up to the author. Sometimes people might want to go on a long rant here and maybe explain some of what is going on in the link they provided. There are plenty of reasons to want to add content here.",
-  id: "1"
-}]
 
 let commentList = commentData.map(function(comment) {
   return (

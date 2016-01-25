@@ -4,16 +4,58 @@ import { Link } from 'react-router'
 import CSSModules from 'react-css-modules'
 import styles from './styles.css'
 
+import Newsfeed from 'components/Navbar/Newsfeed'
+
+const ProfileDropdown = React.createClass({
+  render() {
+    return (
+      <div onClick={this.props.handleProfileDropdown} className={ this.props.profileDropdown ? styles.profileToggled : styles.profile }>
+        <div className={ styles.row }>
+          sam@learnphoenix.io
+        </div>
+        <div className={ styles.row }>
+          <div>
+            1200
+          </div>
+          <div>
+            ∞
+          </div>
+        </div>
+        <div className={ this.props.profileDropdown ? styles.profileDropdown : styles.hidden }>
+          <Link to="new" className={ styles.dropdownItem }>
+            New Post
+          </Link>
+          <Link to="profile" className={ styles.dropdownItem }>
+            Profile
+          </Link>
+          <Link to="stats" className={ styles.dropdownItem }>
+            Stats
+          </Link>
+          <div onClick={this.logout} className={ styles.dropdownItem }>
+            Logout
+          </div>
+        </div>
+      </div>
+    )
+  }
+})
+
 const LoggedIn = React.createClass({
   // TODO pull out of local state and into redux
   getInitialState() {
     return {
-      toggled: false
+      profileDropdown: false,
+      newsfeedDropdown: false
     }
   },
-  handleToggle() {
+  handleProfileDropdown() {
     this.setState({
-      toggled: this.state.toggled ? false : true
+      profileDropdown: this.state.profileDropdown ? false : true
+    })
+  },
+  handleNewsfeedDropdown() {
+    this.setState({
+      newsfeedDropdown: this.state.newsfeedDropdown ? false : true
     })
   },
   logout() {
@@ -24,38 +66,10 @@ const LoggedIn = React.createClass({
     return (
       <ul className={ styles.navbarGroup }>
         <li className={ styles.navbarListItem }>
-          <div className={ styles.newsfeed }>
-            Newsfeed
-          </div>
+          <Newsfeed handleNewsfeedDropdown={this.handleNewsfeedDropdown} newsfeedDropdown={this.state.newsfeedDropdown} />
         </li>
         <li className={ styles.navbarListItem }>
-          <div onClick={this.handleToggle} className={ this.state.toggled ? styles.profileToggled : styles.profile }>
-            <div className={ styles.row }>
-              sam@learnphoenix.io
-            </div>
-            <div className={ styles.row }>
-              <div>
-                1200
-              </div>
-              <div>
-                ∞
-              </div>
-            </div>
-            <div className={ this.state.toggled ? styles.dropdown : styles.hidden }>
-              <Link to="new" className={ styles.dropdownItem }>
-                New Post
-              </Link>
-              <Link to="profile" className={ styles.dropdownItem }>
-                Profile
-              </Link>
-              <Link to="stats" className={ styles.dropdownItem }>
-                Stats
-              </Link>
-              <div onClick={this.logout} className={ styles.dropdownItem }>
-                Logout
-              </div>
-            </div>
-          </div>
+          <ProfileDropdown handleProfileDropdown={this.handleProfileDropdown} profileDropdown={this.state.profileDropdown} />
         </li>
       </ul>
     )

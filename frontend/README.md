@@ -9,3 +9,7 @@
 [ ] user login
 
 [ ] user register
+
+[ ] ugh... issues with modal...
+
+[ ] newsfeed, with badge and dropdown

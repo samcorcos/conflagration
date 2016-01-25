@@ -9,7 +9,8 @@ import LoggedOut from './loggedout'
 
 const Navbar = React.createClass({
   render() {
-    let loginStatus = false
+    // TODO this is a placeholder
+    let loginStatus = true
     return (
       <div className={ styles.navbar }>
         <Link to="/" className={ styles.logo }>

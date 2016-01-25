@@ -7,7 +7,7 @@ import Post from './post'
 import CommentComponent from './comment'
 import { commentListData } from 'config/seeds'
 
-let commentList = commentData.map(function(comment) {
+let commentList = commentListData.map(function(comment) {
   return (
     <CommentComponent
       key={comment.id}

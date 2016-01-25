@@ -17,7 +17,7 @@ import styles from './comment.css'
 const CommentComponent = React.createClass({
   render() {
     return (
-      <div>
+      <div className={ styles.comment }>
         <div className={ styles.row }>
           <div className={ styles.voting }>
             <div className={ styles.arrowUp }></div>

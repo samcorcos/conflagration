@@ -76,6 +76,7 @@
   margin-top: 2rem;
   padding-top: 1rem;
   display: flex;
+  flex-flow: column nowrap;
   width: 800px;
 }
 

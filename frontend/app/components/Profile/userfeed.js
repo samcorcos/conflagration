@@ -22,7 +22,7 @@ let postList = postListData.map(function(post) {
   )
 })
 
-let commentList = commentData.map(function(comment) {
+let commentList = commentListData.map(function(comment) {
   return (
     <CommentComponent
       key={comment.id}

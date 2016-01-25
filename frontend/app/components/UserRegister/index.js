@@ -6,7 +6,7 @@ import styles from './styles.css'
 const UserRegister = React.createClass({
   render() {
     return (
-      <section className={ styles.registrationWrapper }>
+      <div className={ styles.registrationWrapper }>
         <div className={ styles.registrationCard }>
           <form className={ styles.registrationForm }>
             <div className={ styles.formGroup }>
@@ -41,7 +41,7 @@ const UserRegister = React.createClass({
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )
   }
 });

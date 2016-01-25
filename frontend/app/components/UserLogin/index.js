@@ -6,7 +6,7 @@ import styles from './styles.css'
 const UserLogin = React.createClass({
   render() {
     return (
-      <section className={ styles.loginWrapper }>
+      <div className={ styles.loginWrapper }>
         <div className={ styles.loginCard }>
           <form className={ styles.loginForm }>
             <div className={ styles.formGroup }>
@@ -33,7 +33,7 @@ const UserLogin = React.createClass({
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )
   }
 });

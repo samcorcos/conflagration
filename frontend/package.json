@@ -5,24 +5,31 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "selenium-install": "selenium-standalone install",
+    "selenium-start": "selenium-standalone start &>/dev/null &",
+    "test": "wdio wdio.conf.js"
   },
   "author": "Sam Corcos <sam@learnphoenix.io> (http://github.com/learnphoenix)",
   "license": "CC-BY-4.0",
   "devDependencies": {
     "babel-core": "^6.0.20",
     "babel-loader": "^6.0.1",
+    "babel-polyfill": "^6.3.14",
     "babel-preset-es2015": "^6.0.15",
     "babel-preset-react": "^6.0.15",
     "babel-preset-stage-0": "^6.0.15",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1",
+    "babel-register": "^6.4.3",
+    "css-loader": "^0.22.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "mocha": "^2.3.4",
     "react-hot-loader": "^1.3.0",
     "react-to-html-webpack-plugin": "^2.2.0",
-    "css-loader": "^0.22.0",
+    "redux-devtools": "^2.1.5",
+    "selenium-standalone": "^4.8.0",
     "style-loader": "^0.13.0",
-    "extract-text-webpack-plugin": "^0.9.1",
-    "redux-devtools": "^2.1.5"
+    "webdriverio": "^3.4.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
     "axios": "^0.9.1",

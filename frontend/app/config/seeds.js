@@ -87,7 +87,8 @@ let userData = {
     { platform: "google", link: "twitter.com/samcorcos" },
     { platform: "facebook", link: "twitter.com/samcorcos" }
   ],
-  badge: "admin"
+  badge: "admin",
+  password: "password"
 }
 
 export { postListData, commentListData, userData }

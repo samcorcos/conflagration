@@ -10,7 +10,7 @@ const LoggedOut = React.createClass({
   // TODO move out of local state
   getInitialState() {
     return {
-      modal: true,
+      modal: false,
       loginOrRegister: "login"
     }
   },
